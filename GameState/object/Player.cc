@@ -19,6 +19,11 @@ Player::Player(int id, std::string name):
     state_vec_.push_back(PlayerDieState::Instance());
 }
 
+Player::~Player(){
+    delete state_manager_;
+    state_vec_.clear();
+}
+
 StateManager* Player::GetFsm(){
     return state_manager_;
 }

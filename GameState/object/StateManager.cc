@@ -9,6 +9,10 @@ StateManager::StateManager(Player* player, PlayerState* state):
     cur_state_->Enter(player);
 }
 
+StateManager::~StateManager(){
+
+}
+
 void StateManager::Update(float ts){
     if(cur_state_ != nullptr){
         cur_state_->Update(ts, player_);

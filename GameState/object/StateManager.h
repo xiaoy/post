@@ -6,7 +6,7 @@ class Player;
 class StateManager{
 public:
     StateManager(Player* player, PlayerState* state);
-    virtual ~StateManager(){}
+    virtual ~StateManager();
     void Update(float ts);
     void ChangeState(PlayerState* state);
     PlayerState* GetCurState();

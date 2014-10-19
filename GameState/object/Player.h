@@ -10,7 +10,7 @@ static const float kUpdateTime = 2.0f;
 class Player{
 public:
     Player(int id, std::string name);
-    virtual ~Player(){}
+    virtual ~Player();
     void Update(float ts);
     bool IsDie();
     StateManager* GetFsm();

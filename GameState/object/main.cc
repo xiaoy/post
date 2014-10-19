@@ -21,4 +21,5 @@ int main(){
             }
         }
     }
+    delete player;
 }
