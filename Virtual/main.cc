@@ -1,21 +1,42 @@
 #include <iostream>
 
-class Base{
+class Point2d{
 public:
-    virtual ~Base(){ std::cout << "Base Dis Constructor called\n";}
+    Point2d(float x, float y):
+        x_(x),
+        y_(y)
+    {
+
+    }
+
+    virtual void SetX(float x){
+        x_ = x;
+    }
+
+    virtual void SetY(float y){
+        y_ = y;
+    }
+private:
+    float x_;
+    float y_;
 };
 
-class SubClass : public Base{
+class Point3d : public Point2d{
 public:
-    ~SubClass() { std::cout <<"SubClass Dis Constructor called\n";}
+    Point3d(float x, float y, float z):
+        Point2d(x, y),
+        z_(z)
+    {
+
+    }
+    void SetZ(float z){
+        z_ = z;
+    }
+private:
+    float z_;
 };
+
 
 int main(){
-    SubClass sub;
-
-    std::cout << "base pointer begin:\n";
-    Base* base = new SubClass();
-    delete base;
-    std::cout << "base pointer end:\n";
-    return 0;
+    // size
 }
