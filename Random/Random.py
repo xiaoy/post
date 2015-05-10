@@ -6,7 +6,7 @@ import random
 def get_reward_arr1(coin_sum, n):
     det_coin = coin_sum / n
     coin_arr = [det_coin for i in range(n)]
-    max_lose_coin = det_coin / 2
+    max_lose_coin = det_coin / 2 - 1
 
     for i in range(n):
         lose_coin = random.randint(0, max_lose_coin)
